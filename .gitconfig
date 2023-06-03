@@ -1,0 +1,10 @@
+[pull]
+	rebase = true
+	prune = true
+[user]
+	email = decai.wang@foxmail.com
+	name = evilolipop
+[core]
+	editor = vim
+[init]
+	defaultBranch = main
