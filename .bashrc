@@ -129,3 +129,5 @@ export PATH=$(go env GOPATH)/bin:$PATH
 # source <(kubectl completion bash)
 
 [ -s "$HOME/.cargo/env" ] && \. "$HOME/.cargo/env"
+
+export PATH=$PATH:$HOME/.local/bin
