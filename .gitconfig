@@ -1,6 +1,7 @@
 [pull]
 	rebase = true
 	prune = true
+	followTags = true
 [user]
 	email = decai.wang@foxmail.com
 	name = evilolipop
