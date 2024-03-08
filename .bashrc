@@ -130,4 +130,7 @@ export PATH=$(go env GOPATH)/bin:$PATH
 
 [ -s "$HOME/.cargo/env" ] && \. "$HOME/.cargo/env"
 
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$HOME/.local/bin:$PATH
+
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"

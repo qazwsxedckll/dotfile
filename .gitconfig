@@ -1,6 +1,5 @@
 [pull]
 	rebase = true
-	prune = true
 	followTags = true
 [user]
 	email = decai.wang@foxmail.com
@@ -9,3 +8,5 @@
 	editor = vim
 [init]
 	defaultBranch = main
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
