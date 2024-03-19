@@ -1,6 +1,5 @@
 [pull]
 	rebase = true
-	followTags = true
 [user]
 	email = decai.wang@foxmail.com
 	name = evilolipop
@@ -12,3 +11,5 @@
 	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
 [fetch]
 	prune = true
+[push]
+	followTags = true
