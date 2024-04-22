@@ -125,9 +125,6 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$(go env GOPATH)/bin:$PATH
 
-# export PATH="/mnt/c/Users/ly-wangdec/AppData/Local/Programs/Microsoft VS Code/bin":$PATH
-# source <(kubectl completion bash)
-
 [ -s "$HOME/.cargo/env" ] && \. "$HOME/.cargo/env"
 
 export PATH=$HOME/.local/bin:$PATH
