@@ -131,3 +131,17 @@ export PATH=$HOME/.local/bin:$PATH
 
 . "$HOME/.asdf/asdf.sh"
 . "$HOME/.asdf/completions/asdf.bash"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
+
+# fnm
+FNM_PATH="/home/evilolipop/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
