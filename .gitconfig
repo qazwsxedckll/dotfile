@@ -1,10 +1,11 @@
+# [user]
+# 	email = decai.wang@foxmail.com
+# 	name = evilolipop
 [pull]
 	rebase = true
-[user]
-	email = decai.wang@foxmail.com
-	name = evilolipop
 [core]
 	editor = vim
+	autocrlf = input
 [init]
 	defaultBranch = main
 [fetch]
@@ -13,4 +14,4 @@
 	followTags = true
 	autoSetupRemote = true
 [alias]
-	prune-gone = "!git fetch -p && for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == \"[gone]\" {sub(\"refs/heads/\", \"\", $1); print $1}'); do git branch -D $branch; done"
+	prune-local = "!git fetch -p && for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == \"[gone]\" {sub(\"refs/heads/\", \"\", $1); print $1}'); do git branch -D $branch; done"
