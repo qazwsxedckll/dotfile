@@ -105,6 +105,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -133,22 +135,24 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-
 # golang
-export PATH=$PATH:/usr/local/go/bin
 export PATH=$(go env GOPATH)/bin:$PATH
 
 # fnm
-FNM_PATH="/home/evilolipop/.local/share/fnm"
+FNM_PATH="$HOME/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
-  eval "$(fnm env --use-on-cd --version-file-strategy=recursive --shell zsh)"
+  eval "$(fnm env --use-on-cd --version-file-strategy=recursive --resolve-engines --shell zsh)"
 fi
 
 # bun completions
-[ -s "/home/evilolipop/.bun/_bun" ] && source "/home/evilolipop/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+eval "$(zoxide init zsh)"
