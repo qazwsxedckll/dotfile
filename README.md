@@ -1,7 +1,8 @@
 # Best Way to Store in a Bare Git Repository
 
 ## Starting from scratch
-```
+
+``` bash
 git init --bare $HOME/.cfg
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
@@ -9,7 +10,8 @@ echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $H
 ```
 
 ## Install your dotfiles onto a new system
-```
+
+``` bash
 echo ".cfg" >> .gitignore
 git clone --bare <git-repo-url> $HOME/.cfg
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
