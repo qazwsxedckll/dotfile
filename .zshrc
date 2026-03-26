@@ -101,11 +101,13 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+# zoxide, must before source $ZSH/oh-my-zsh.sh
+export ZOXIDE_CMD_OVERRIDE="cd"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -154,5 +156,3 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
-
-eval "$(zoxide init zsh)"
